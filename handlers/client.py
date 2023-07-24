@@ -18,7 +18,7 @@ from misc.throttling import rate_limit
 #@dp.message_handler(commands=['help'])\
 @rate_limit(limit=3)
 async def help_handler(message: types.Message):
-        await bot.send_message(message.from_user.id, "По техническим вопросам можете обращаться к Максиму Александровичу - @Maxim_MironovDNR")
+        await bot.send_message(message.from_user.id, "По техническим вопросам можете обращаться к *****")
 @rate_limit(limit=3)
 async def faq_handler(message: types.Message):
     await bot.send_message(message.from_user.id, "Для того, чтобы оформить заказ, Вам нужно прислать скриншот необходимого товара, а также артикул и количество нужного Вам товара.\n"
