@@ -135,7 +135,7 @@ async def not_photo(message: types.Message, state: FSMContext):
     elif message.text == '🆘 Помощь':
         await bot.send_message(message.from_user.id,
                                f"{user_full_name}, если вам потребуется помощь, или Вам непонятен функционал бота, "
-                               f"вы можете обращаться к Максиму Александровичу - @Maxim_MironovDNR", reply_markup=menu_but)
+                               f"вы можете обращаться к ****", reply_markup=menu_but)
         await state.finish()
     elif message.text == '🔙 Меню':
         await bot.send_message(message.from_user.id, f'{user_full_name}, Выберите действие',
@@ -163,7 +163,7 @@ async def load_article(message: types.Message, state: FSMContext):
     elif message.text == '🆘 Помощь':
         await bot.send_message(message.from_user.id,
                          f"{user_full_name}, если вам потребуется помощь, или Вам непонятен функционал бота "
-                         f"Вы можете обращаться к Максиму Александровичу - @Maxim_MironovDNR", reply_markup=menu_but)
+                         f"Вы можете обращаться к ****", reply_markup=menu_but)
         await state.finish()
     else:
         async with state.proxy() as data:
@@ -189,7 +189,7 @@ async def load_price(message: types.Message, state: FSMContext):
     elif message.text == '🆘 Помощь':
         await bot.send_message(message.from_user.id,
                          f"{user_full_name}, если вам потребуется помощь, или Вам непонятен функционал бота "
-                         f"Вы можете обращаться к Максиму Александровичу - @Maxim_MironovDNR", reply_markup=menu_but)
+                         f"Вы можете обращаться к *****", reply_markup=menu_but)
         await state.finish()
 
     else:
@@ -244,7 +244,7 @@ async def help(message:types.Message):
     user_full_name = message.from_user.full_name
     logging.info(f'{user_id=} {user_full_name=}, {time.asctime()}')
     await bot.send_message(message.from_user.id, f"{user_full_name}, если вам потребуется помощь, или Вам непонятен функционал бота"
-                                                 f"Вы можете обращаться к Максиму Александровичу - @Maxim_MironovDNR", reply_markup=menu_but)
+                                                 f"Вы можете обращаться к *****", reply_markup=menu_but)
 
 @rate_limit(limit=3)
 async def after_order(message:types.message):
